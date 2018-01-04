@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -50,15 +51,23 @@ public class CoffeeAdapter extends RecyclerView.Adapter<CoffeeAdapter.ViewHolder
         @BindView(R.id.cena)
         TextView Cena;
 
+        @BindView(R.id.check)
+        ImageView Wybrane;
+
         @OnClick(R.id.button_wybierz)
         void onNameClick(){
-            Intent intent = new Intent(itemView.getContext(), MainActivity.class);
-            itemView.getContext().startActivity(intent);
+            if(Wybrane.getVisibility()==View.INVISIBLE){
+                Wybrane.setVisibility(View.VISIBLE);
+            }
+            else{
+                Wybrane.setVisibility(View.INVISIBLE);
+            }
         }
 
         public ViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
+            Wybrane.setVisibility(View.INVISIBLE);
         }
 
         private void setName(String name) {
