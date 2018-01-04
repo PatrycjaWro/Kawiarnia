@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Podaj numer stolika"
-        android:layout_marginBottom="160dp"
+        android:layout_marginBottom="230dp"
         android:gravity="center"
         android:textColor="@color/colorPrimary" />
 
@@ -42,7 +42,9 @@
         android:id="@+id/button_danie"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:background="@color/colorPrimary"
         android:text="WYBIERZ DANIE"
         android:textColor="@android:color/white" />
